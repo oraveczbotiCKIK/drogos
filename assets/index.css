@@ -114,3 +114,9 @@ ul {
   margin-left: 20px;
 }
 
+video, audio {
+  width: 100%;
+  border: 2px solid limegreen;
+  border-radius: 8px;
+}
+

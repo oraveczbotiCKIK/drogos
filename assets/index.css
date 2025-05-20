@@ -90,3 +90,13 @@ section h2 {
   color: var(--highlight);
 }
 
+table th {
+  background-color: #2f4f2f;
+  color: white;
+}
+
+table td {
+  background-color: #3c3c3c;
+  color: white;
+}
+

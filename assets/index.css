@@ -100,3 +100,17 @@ table td {
   color: white;
 }
 
+a {
+  color: #99ff99;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: lime;
+}
+
+ul {
+  text-align: left;
+  margin-left: 20px;
+}
+

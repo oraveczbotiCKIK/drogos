@@ -86,3 +86,7 @@ body {
   padding: 0;
 }
 
+section h2 {
+  color: var(--highlight);
+}
+

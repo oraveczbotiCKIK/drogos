@@ -11,89 +11,125 @@
         <title>Ecstasy</title>
     </head>
     <body>
-      <div id="falling-container">
+      <main>
+      <div id="falling-container">  
+        <div class="container content mt-5 mb-5">
+          <header class="mb-4">
+            <h1 id="main-h1">Ecstasy – Drogprevenciós Ismeretek</h1>
+            <p class="lead">Ismerd meg az <strong>ecstasy</strong> hatásait, veszélyeit és azt, hogyan segíthetünk a megelőzésben.</p>
+          </header>
         
-<footer style="position: fixed; bottom: 0; width: 100%; margin-left: -20px;" class="bg-dark text-center text-white">
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2025 Copyright:
-    <p class="text-white">Készítették: Oravecz Botond, Rendek Richárd Zalán</p>
-    <p>Az oldal tanulási célal jött létre(Nem támogat semmit az oldalon említettekből)</p>
-  </div>
-</footer>
+          <section class="mb-4">
+            <h2>Mi az ecstasy?</h2>
+            <p>
+              Az <strong><em>ecstasy</em></strong> (MDMA) egy szintetikus pszichoaktív anyag, amely rövid távon fokozott empátiát, energikusságot és boldogságérzetet okozhat, de hosszú távon <strong>agykárosodáshoz, depresszióhoz</strong> és <strong>szorongáshoz</strong> vezethet.
+            </p>
+          </section>
+        
+          <section class="mb-4">
+            <h2>Veszélyei</h2>
+            <ul>
+              <li><strong>Mentális egészségre gyakorolt hatások</strong> (hangulatingadozás, alvászavar, szorongás)</li>
+              <li><strong>Hőgutához és kiszáradáshoz</strong> vezethet táncos közegben</li>
+              <li><strong>Aggályos tisztaság</strong> – gyakran más anyagokkal keverik</li>
+            </ul>
+          </section>
 
-        <script>
-            const fallingContainer = document.getElementById('falling-container');
-    
-      const pngImages = [
-        'https://cdn-icons-png.flaticon.com/128/2160/2160424.png',  
-        'https://cdn-icons-png.flaticon.com/128/2160/2160424.png', 
-        'https://cdn-icons-png.flaticon.com/128/2160/2160424.png'   
-      ];
-    
-       const maxImages = 35;
-    
-      class FallingImage {
-        constructor(src) {
-          this.el = document.createElement('img');
-          this.el.src = src;
-          this.el.className = 'falling-img';
-          this.reset();
-          fallingContainer.appendChild(this.el);
-        }
-    
-        reset() {
-          this.x = Math.random() * window.innerWidth;
-          this.y = -50 - (Math.random()*200);
-          this.size = 20 + Math.random() * 30;
-          this.speedY = 1 + Math.random() * 2;
-          this.speedX = (Math.random() - 0.5) * 0.5;
-          this.el.style.width = this.size + 'px';
-          this.el.style.height = 'auto';
-          this.el.style.transform = 'translate(' + this.x + 'px, ' + this.y + 'px) rotate(0deg)';
-          this.rot = 0;
-          this.rotSpeed = (Math.random() - 0.5) * 1.5;
-          this.opacity = 0.5 + Math.random() * 0.5;
-          this.el.style.opacity = this.opacity;
-          this.el.style.zIndex = '0';
-        }
-    
-        update() {
-          this.y += this.speedY;
-          this.x += this.speedX;
-          this.rot += this.rotSpeed;
-          if (this.y > window.innerHeight) {
-            this.reset();
-          }
-          this.el.style.transform = 'translate(' + this.x + 'px, ' + this.y + 'px) rotate(' + this.rot + 'deg)';
-        }
-      }
-    
-      const fallingImages = [];
-    
-      function populateFallingImages() {
-        for(let i=0; i < maxImages; i++) {
-          const src = pngImages[i % pngImages.length];
-          const fi = new FallingImage(src);
-          fi.y = Math.random() * window.innerHeight;
-          fallingImages.push(fi);
-        }
-      }
-    
-      function animate() {
-        fallingImages.forEach(fi => fi.update());
-        requestAnimationFrame(animate);
-      }
-    
-      populateFallingImages();
-      animate();
-    
-      window.addEventListener('resize', () => {
-      });
-    
-    
-    
-        </script>
-    </div>
-    
-    </body>
+          <section class="mb-4">
+            <h2>Hogyan segíthetünk?</h2>
+            <p>
+              A megelőzés kulcsa a <strong>tájékoztatás</strong> és az <strong>őszinte kommunikáció</strong>. Fontos, hogy:
+            </p>
+            <ul>
+              <li>Nyíltan beszéljünk a partikultúrához kötődő drogokról otthon és iskolában</li>
+              <li>Hozzáférést biztosítsunk <em>megbízható információkhoz</em></li>
+              <li><strong>Biztonságosabb alternatívákat</strong> kínáljunk szórakozásra</li>
+            </ul>
+          </section>
+
+          <section class="mb-4">
+            <h2>Képek és források</h2>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <a href="assets/img/ecstasy-pills.png" target="_blank">
+                  <img src="assets/img/ecstasy-pills.png" class="img-fluid img-thumbnail" alt="Ecstasy tabletták">
+                </a>
+              </div>
+              <div class="col-md-3 mb-3">
+                <a href="https://drogkutato.hu/cikkek/ecstasy-hatasai/" target="_blank">
+                  <img src="assets/img/brain-effect-ecstasy.png" class="img-fluid img-thumbnail" alt="Ecstasy hatása az agyra" title="ecstasy hatása az agyra">
+                </a>
+              </div>
+              <div class="col-md-3 mb-3">
+                <a href="https://24.hu/elet-stilus/2022/08/12/ecstasy-hatasai-kockazatok/" target="_blank">
+                  <img src="assets/img/ecstasy-vs-safe.png" class="img-fluid img-thumbnail" alt="Ecstasy veszélyei">
+                </a>
+              </div>
+              <div class="col-md-3 mb-3">
+                <a href="assets/img/drogvilag5.png" target="_blank">
+                  <img src="assets/img/drogvilag5.png" class="img-fluid img-thumbnail" alt="Megelőzés plakát">
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-4">
+            <h2>Statisztika</h2>
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th>Korosztály</th>
+                  <th>Használók aránya (%)</th>
+                  <th>Trend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>14-18 év</td>
+                  <td>5%</td>
+                  <td>Növekvő</td>
+                </tr>
+                <tr>
+                  <td>19-25 év</td>
+                  <td>12%</td>
+                  <td>Stagnáló</td>
+                </tr>
+                <tr>
+                  <td>26 év felett</td>
+                  <td>3%</td>
+                  <td>Csökkenő</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="mb-4">
+            <h2>Médiatartalom</h2>
+            <p>Ismeretterjesztő videó és hanganyag:</p>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://youtu.be/xknz4C0ngT0?si=6jCMVzlMKvDpKdkp" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </section>
+
+          <section class="mb-5">
+            <h2 id="leszok">A leszokásban segítséget kérhet:</h2>
+            <ul>
+              <li><a href="https://drogprevencio.hu" target="_blank">drogprevencio.hu</a></li>
+            </ul>
+          </section>
+          <div id="eltolt"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-center text-white">
+      <div class="text-center p-3">
+        © 2025 Copyright:
+        <p class="text-white">Készítették: Oravecz Botond, Rendek Richárd Zalán</p>
+        <p>Az oldal tanulási céllal jött létre (Nem támogat semmit az oldalon említettekből)</p>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
 </html>

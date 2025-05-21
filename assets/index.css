@@ -120,9 +120,14 @@ ul {
   margin-left: 20px;
 }
 
-
-
-
 #eltolt {
   height: 100px;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0; 
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }

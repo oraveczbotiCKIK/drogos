@@ -8,7 +8,8 @@ const pngImages = [
 ];
 
 const maxImages = 35;
-
+const width=window.innerWidth-100;
+const height=window.innerHeight-50;
 class FallingImage {
   constructor(src) {
     this.el = document.createElement('img');
@@ -19,7 +20,7 @@ class FallingImage {
   }
 
   reset() {
-    this.x = Math.random() * window.innerWidth;
+    this.x = Math.random() * width;
     this.y = -50 - (Math.random() * 200);
     this.size = 20 + Math.random() * 30;
     this.speedY = 1 + Math.random() * 2;
@@ -39,7 +40,7 @@ class FallingImage {
     this.x += this.speedX;
     this.rot += this.rotSpeed;
 
-    if (this.y > window.innerHeight) {
+    if (this.y > height) {
       this.reset();
     }
 
@@ -58,7 +59,7 @@ function populateFallingImages() {
   for (let i = 0; i < maxImages; i++) {
     const src = pngImages[i % pngImages.length];
     const fi = new FallingImage(src);
-    fi.y = Math.random() * window.innerHeight;
+    fi.y = Math.random() * height;
     fallingImages.push(fi);
   }
 }

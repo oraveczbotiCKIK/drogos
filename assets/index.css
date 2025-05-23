@@ -152,5 +152,31 @@ nav li a {
   color: white !important;
 }
 
+.navbar5 {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.09);
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+nav li a {
+  text-decoration: none;
+  color: lime !important;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease, font-size 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+nav li a:hover {
+  color: white !important;
+}
+
+nav li a.active {
+  background-color: rgba(0, 255, 0, 0.2); 
+  font-size: 1.2rem;
+  border: 2px solid lime;
+  color: white !important;
+}
 
 

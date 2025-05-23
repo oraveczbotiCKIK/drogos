@@ -133,5 +133,24 @@ footer {
   z-index: 1000;
 }
 
+.navbar5 {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.09);
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+
+nav li a {
+  text-decoration: none;
+  color: lime !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+ nav li a:hover {
+  color: white !important;
+}
+
 
 
